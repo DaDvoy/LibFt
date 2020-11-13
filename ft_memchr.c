@@ -6,12 +6,11 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 20:37:52 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/09 20:55:41 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/10 20:16:22 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void		*ft_memchr(const void *s, int c, size_t n)
 {
@@ -30,14 +29,5 @@ void		*ft_memchr(const void *s, int c, size_t n)
 		}
 		p++;
 	}
-	return (0);
-}
-
-int			main(void)
-{
-	char	s[] = "123qwe456rty";
-
-	printf("%s\n", memchr(s, 'w', 1));
-	printf("%s\n", ft_memchr(s, 'w', 1));
 	return (0);
 }

@@ -6,12 +6,11 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 20:49:11 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/01 21:31:39 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/10 20:16:39 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int		ft_isalnum(int arg)
 {
@@ -24,16 +23,4 @@ int		ft_isalnum(int arg)
 	{
 		return (0);
 	}
-}
-
-int		main(void)
-{
-	int u;
-
-	u = '6';
-	int l = ft_isalnum(u);
-	if (l)
-		printf("%c is true", l);
-	else
-		printf("%c is false", l);
 }

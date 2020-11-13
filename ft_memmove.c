@@ -6,39 +6,37 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 20:11:10 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/09 20:34:09 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/11 22:33:58 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void		*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*t;
 	unsigned char	*y;
 	size_t			z;
+	size_t			x;
 
-	z = 0;
 	t = (unsigned char*)dst;
 	y = (unsigned char*)src;
-	while (z < len)
-	{
-		y[z] = *t;
-		z++;
+	if (len == 0 || t == y)
 		return (t);
+	if (y < t)
+	{
+		z = len - 1;
+		x = -1;
+	}
+	else
+	{
+		z = 0;
+		x = 1;
+	}
+	while (len--)
+	{
+		t[z] = y[z];
+		z += x;
 	}
 	return (t);
-}
-
-int			main(void)
-{
-	char src[] = "12345";
-	char dst[] = "qwert";
-
-	printf("%s\n", memmove(dst, src, 5));
-	printf("%s\n", dst);
-	printf("%s\n", ft_memmove(dst, src, 5));
-	printf("%s\n", dst);
-	return (0);
 }

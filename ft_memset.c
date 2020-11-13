@@ -6,12 +6,11 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 17:05:51 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/09 22:55:57 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/10 20:16:11 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void		*ft_memset(void *b, int c, size_t len)
 {
@@ -26,13 +25,4 @@ void		*ft_memset(void *b, int c, size_t len)
 		p++;
 	}
 	return (t);
-}
-
-int			main(void)
-{
-	char t[10] = "1234qwer";
-
-	printf("%s\n", memset(t, 2, 6));
-	printf("%s\n", ft_memset(t, 2, 6));
-	return (0);
 }

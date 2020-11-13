@@ -6,46 +6,32 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 15:07:10 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/08 19:10:04 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/11 22:15:16 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include "ft_strlen.c"
-#include "ft_strncmp.c"
+#include "libft.h"
 
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char	*t;
-	char	*r;
-	size_t	p;
-	size_t	ln;
+	char	*hayst_cpy;
+	char	*need_cpy;
+	size_t	i;
+	size_t	need_len;
 
-	p = 0;
-	t = (char*)haystack;
-	r = (char*)needle;
-	ln = ft_strlen(r);
-	if (r == 0)
-		return (t);
-	while (t[p] != '\0')
+	i = 0;
+	hayst_cpy = (char*)haystack;
+	need_cpy = (char*)needle;
+	if (len == 0 && *need_cpy == '\0')
+		return (hayst_cpy);
+	need_len = ft_strlen(need_cpy);
+	if (need_len == 0)
+		return (hayst_cpy);
+	while (hayst_cpy[i] != '\0' && i + need_len <= len)
 	{
-		if (t[p] == r[0])
-		{
-			if (ft_strncmp(&t[p], r, ln) == 0)
-				return (&t[p]);
-		}
-		p++;
+		if (ft_strncmp(&hayst_cpy[i], need_cpy, need_len) == 0)
+			return (&hayst_cpy[i]);
+		i++;
 	}
-	return (0);
-}
-
-int		main(void)
-{
-	char str[] = "123456qwert";
-	char trt[] = "w";
-
-	printf("%s\n", strnstr(str, trt, 9));
-	printf("%s\n", ft_strnstr(str, trt, 9));
-	return (0);
+	return (NULL);
 }
