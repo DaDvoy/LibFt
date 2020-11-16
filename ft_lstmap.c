@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 04:33:39 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/16 15:34:45 by lmushroo         ###   ########.fr       */
+/*   Created: 2020/11/16 21:50:37 by lmushroo          #+#    #+#             */
+/*   Updated: 2020/11/16 22:01:33 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strjoin(char const *s1, char const *s2)
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t		len_s1;
-	size_t		len_s2;
-	size_t		i;
-	size_t		ii;
-	char		*str;
+	t_list		list;
 
-	i = -1;
-	ii = 0;
-	if (s1 == NULL || s2 == NULL)
+	if (lst == NULL || del == NULL)
 		return (NULL);
-	len_s1 = ft_strlen(s1);
-	len_s2 = ft_strlen(s2);
-	if ((str = (char *)malloc((len_s1 + len_s2 + 1) * sizeof(char))) == NULL)
-		return (NULL);
-	while (++i < len_s1)
+	list = (t_list *)malloc(sizeof(t_list));
+	if (!list)
 	{
-		str[i] = s1[i];
+		del(lst->content);
+		free(lst);
 	}
-	while (i <= (len_s1 + len_s2))
+	while (lst != NULL)
 	{
-		str[i] = s2[ii];
-		i++;
-		ii++;
+		list = f(list->content);
+		lst = lst->next;
 	}
-	return (str);
 }

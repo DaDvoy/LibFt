@@ -6,7 +6,7 @@
 #    By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/10 18:16:03 by lmushroo          #+#    #+#              #
-#    Updated: 2020/11/16 11:45:39 by lmushroo         ###   ########.fr        #
+#    Updated: 2020/11/16 21:59:07 by lmushroo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,35 +17,36 @@ ft_isascii.c ft_isdigit.c ft_isprint.c ft_memccpy.c ft_memchr.c ft_memcmp.c\
 ft_memmove.c ft_memset.c ft_memcpy.c ft_strchr.c ft_strlcat.c ft_strlcpy.c\
 ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_tolower.c ft_toupper.c\
 ft_strdup.c ft_substr.c ft_strjoin.c ft_putchar_fd.c ft_putendl_fd.c\
-ft_putstr_fd.c ft_putnbr_fd.c ft_strmapi.c
+ft_putstr_fd.c ft_strmapi.c 
 
-BONUS_C_FILES = ft_lstnew.c ft_lstsize.c ft_lstlast.c
+BONUS_C_FILES = ft_lstnew.c ft_lstsize.c ft_lstlast.c ft_lstadd_front.c\
+ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-ifdef COMPILE_BONUS
-	O_FILES = $(C_FILES:.c=.o) $(BONUS_C_FILES:.c=.o)
-else
-	O_FILES = $(C_FILES:.c=.o)
-endif
+OBJS = $(C_FILES:.c=.o)
 
-HEADER = libft.h
+B_OBJS = $(BONUS_C_FILES:.c=.o)
+
+CC = gcc
+
+RM = rm -f
+
+C_FLAGS = -Wall -Wextra -Werror
 
 .PHONY: all clean fclean bonus re
 
 all: $(NAME)
 
-$(NAME): $(O_FILES)
-	ar -rcs $(NAME) $(O_FILES)
+$(NAME):	$(OBJS)
+	ar -rc	$(NAME) $(OBJS)
+	ranlib	$(NAME)
 
-%.o: %.c $(HEADER)
-	gcc -Wall -Werror -Wextra -c $<
-
-bonus:
-	$(MAKE) COMPILE_BONUS=1 all
-
+bonus:		$(B_OBJS)
+	ar -rc	$(NAME) $(B_OBJS)
+	ranlib	$(NAME)
 clean:
-	@rm -f $(O_FILES) $(BONUS_C_FILES:.c=.o)
+	@$(RM) $(OBJS) $(B_OBJS)
 
 fclean: clean
-	-rm -f $(NAME)
+	-$(RM) $(NAME)
 
 re: fclean all
