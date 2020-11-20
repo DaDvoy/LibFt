@@ -6,51 +6,53 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 17:48:36 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/20 01:11:29 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/20 20:54:10 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
+int			ft_check(int n)
+{
+	int		i;
+
+	i = 0;
+	if (n < 0)
+	{
+		n = -n;
+		i++;
+	}
+	while (n)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i);
+}
 
 char		*ft_itoa(int n)
 {
-	size_t		i;
-	size_t		extra_n;
-	char		*str;
+	int		i;
+	char	*str;
 
-	i = 0;
-	extra_n = n;
-	// if (!n)
-	// 	return (NULL);
-	while (str[i] != '\0')
-	{
-		extra_n = extra_n / 10;
-		i++;
-	}
-	extra_n = n;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	else if (n == 0)
+		return (ft_strdup("0"));
+	i = ft_check(n);
 	if ((str = (char *)malloc((i + 1) * sizeof(char))) == NULL)
 		return (NULL);
-	if (extra_n < 0)
+	if (n < 0)
 	{
-		str[i] = str[i + 1];
 		str[0] = '-';
-		extra_n = extra_n * -1;
+		n = -n;
 	}
-	str[i + 1] = '\0';
-	i--;
-	while (i > 0)
+	str[i--] = '\0';
+	while (n > 0)
 	{
-		str[i] = extra_n % 10 + '0';
-		extra_n = extra_n / 10;
+		str[i] = n % 10 + '0';
+		n = n / 10;
 		i--;
 	}
 	return (str);
-}
-
-int		main(void)
-{
-	int n = -133456;
-
-	printf("%s\n", ft_itoa(n));
 }
