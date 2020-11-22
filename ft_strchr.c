@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 16:49:08 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/10 22:55:32 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/22 23:25:54 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 char		*ft_strchr(const char *s, int c)
 {
 	int		y;
-	char	smt;
+	char	sym;
 
 	y = 0;
-	smt = (unsigned char)c;
+	sym = (char)c;
 	while (s[y] != '\0')
 	{
-		if (s[y] == smt)
+		if (s[y] == sym)
 			return ((char *)(s + y));
 		y++;
 	}
-	if (smt == '\0')
+	if (sym == '\0')
 		return (char *)(s + y);
 	return (NULL);
 }

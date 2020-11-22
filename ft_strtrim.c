@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 18:30:22 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/18 17:44:53 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 00:49:04 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	buf = str;
 	if (!set)
-		return (s1);
+		return ((char *)s1);
 	while (str[i] && ft_strchr(set, str[i]))
 		i++;
 	len = ft_strlen(str) - 1;

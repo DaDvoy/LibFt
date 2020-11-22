@@ -6,13 +6,11 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 22:29:16 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/22 18:10:30 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/22 20:47:51 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 int			ft_lenword(const char *str, char c)
 {
@@ -21,7 +19,7 @@ int			ft_lenword(const char *str, char c)
 	j = 0;
 	if (str)
 	{
-		while (str[j] != c)
+		while (str[j] && str[j] != c)
 			j++;
 	}
 	return (j);
@@ -34,14 +32,16 @@ char		*ft_subs(const char *s, char c, int *i)
 	int		len;
 
 	j = 0;
-	while (s[*i] == c)
+	while (s[*i] && s[*i] == c)
 		*i += 1;
-	len = ft_lenword(s, c);
+	len = ft_lenword(s + *i, c);
 	if ((str = (char *)malloc((len + 1) * sizeof(char))) == NULL)
 		return (NULL);
 	while (s[*i] != '\0' && s[*i] != c)
 	{
-		str[j++] = s[(*i)++];
+		str[j] = s[*i];
+		j++;
+		*i += 1;
 	}
 	str[j] = '\0';
 	return (str);
@@ -104,19 +104,4 @@ char		**ft_split(char const *s, char c)
 	}
 	str[k] = NULL;
 	return (str);
-}
-
-int		main(void)
-{
-	char	**str;
-	int		i;
-
-	i = 0;
-	str = ft_split("  Hello   world  ! ", ' ');
-	while (str[i])
-	{
-		printf("%s\n", str[i]);
-		i++;
-	}
-	return (0);
 }

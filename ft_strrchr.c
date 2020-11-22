@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 14:24:06 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/10 20:15:12 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/22 23:26:36 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 char		*ft_strrchr(const char *s, int c)
 {
-	int		p;
-	char	extra;
+	int		len_s;
+	char	sym;
 
-	extra = (unsigned char)c;
-	p = ft_strlen(s);
-	if (extra == '\0')
-		return (char *)(s + p);
-	while (p > 0)
+	sym = (char)c;
+	len_s = ft_strlen(s);
+	if (sym == '\0')
+		return (char *)(s + len_s);
+	while (len_s > 0)
 	{
-		if (s[p] == extra)
-			return (char *)(s + p);
-		p--;
+		if (s[len_s] == sym)
+			return (char *)(s + len_s);
+		len_s--;
 	}
-	if (s[p] == extra)
-		return (char*)(s + p);
+	if (s[len_s] == sym)
+		return (char*)(s + len_s);
 	return (NULL);
 }

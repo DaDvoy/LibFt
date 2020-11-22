@@ -6,7 +6,7 @@
 #    By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/10 18:16:03 by lmushroo          #+#    #+#              #
-#    Updated: 2020/11/21 20:06:46 by lmushroo         ###   ########.fr        #
+#    Updated: 2020/11/23 00:06:50 by lmushroo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,8 +41,8 @@ $(NAME):	$(OBJS)
 	ar -rc	$(NAME) $(OBJS)
 	ranlib	$(NAME)
 
-bonus:		$(B_OBJS)
-	ar -rc	$(NAME) $(B_OBJS)
+bonus:		$(B_OBJS) $(OBJS)
+	ar -rc	$(NAME) $(B_OBJS) $(OBJS)
 	ranlib	$(NAME)
 clean:
 	@$(RM) $(OBJS) $(B_OBJS)

@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 20:57:42 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/10 20:16:19 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/22 22:14:38 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*t;
-	unsigned char	*y;
-	size_t			r;
+	unsigned char	*str1;
+	unsigned char	*str2;
+	size_t			i;
 
-	t = (unsigned char*)s1;
-	y = (unsigned char*)s2;
-	r = 0;
-	while (r < n)
+	str1 = (unsigned char*)s1;
+	str2 = (unsigned char*)s2;
+	i = 0;
+	while (i < n)
 	{
-		if (t[r] != y[r])
-			return (t[r] - y[r]);
-		r++;
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
 	}
 	return (0);
 }

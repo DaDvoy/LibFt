@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 06:00:55 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/16 06:07:13 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 00:26:58 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_putendl_fd(char *s, int fd)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	if (s != NULL)
