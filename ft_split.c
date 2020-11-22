@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 22:29:16 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/22 20:47:51 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 01:47:01 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_lenword(const char *str, char c)
+static int	ft_lenword(const char *str, char c)
 {
 	int		j;
 
@@ -25,7 +25,7 @@ int			ft_lenword(const char *str, char c)
 	return (j);
 }
 
-char		*ft_subs(const char *s, char c, int *i)
+static char	*ft_subs(const char *s, char c, int *i)
 {
 	int		j;
 	char	*str;
@@ -47,7 +47,7 @@ char		*ft_subs(const char *s, char c, int *i)
 	return (str);
 }
 
-int			ft_count_words(const char *s, char c, int count)
+static int	ft_count_words(const char *s, char c, int count)
 {
 	int		i;
 	int		flag;
@@ -68,7 +68,7 @@ int			ft_count_words(const char *s, char c, int count)
 	return (count);
 }
 
-void		*ft_free(char **str)
+static void	*ft_free(char **str)
 {
 	int		i;
 
