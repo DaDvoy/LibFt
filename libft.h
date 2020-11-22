@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 19:04:05 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/19 20:24:09 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/21 20:06:31 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,5 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_itoa(int n);
 void				ft_putnbr_fd(int n, int fd);
+char				**ft_split(char const *s, char c);
 #endif
