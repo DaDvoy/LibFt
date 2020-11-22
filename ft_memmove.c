@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 20:11:10 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/22 21:40:12 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 01:07:37 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void		*ft_memmove(void *dst, const void *src, size_t len)
 	int				i;
 	int				j;
 
-	buf_dst = (unsigned char*)dst;
-	buf_src = (unsigned char*)src;
+	buf_dst = (unsigned char *)dst;
+	buf_src = (unsigned char *)src;
 	if (len == 0 || buf_dst == buf_src)
 		return (buf_dst);
 	if (buf_src < buf_dst)

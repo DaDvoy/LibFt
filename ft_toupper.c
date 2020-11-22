@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 22:35:37 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/10 22:49:34 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 01:14:44 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int		ft_toupper(int str)
 {
-	return (str >= 'a' && str <= 'z' ? str - 32 : str);
+	if (str >= 'a' && str <= 'z')
+		str = str - 32;
+	return (str);
 }

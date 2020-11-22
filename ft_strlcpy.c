@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:37:43 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/22 22:46:31 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 01:08:45 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t		y;
+	size_t	y;
 
 	y = 0;
 	if (src == NULL || dst == NULL)

@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 21:50:37 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/16 22:01:33 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 01:06:24 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list		list;
+	t_list	list;
 
 	if (lst == NULL || del == NULL)
 		return (NULL);

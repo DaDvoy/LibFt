@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 04:33:39 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/16 15:34:45 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 01:08:25 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t		len_s1;
-	size_t		len_s2;
-	size_t		i;
-	size_t		ii;
-	char		*str;
+	size_t	len_s1;
+	size_t	len_s2;
+	size_t	i;
+	size_t	ii;
+	char	*str;
 
 	i = -1;
 	ii = 0;

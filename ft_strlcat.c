@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 22:42:52 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/22 22:50:38 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 01:08:38 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t u;
-	size_t dst_len;
+	size_t	u;
+	size_t	dst_len;
 
 	u = 0;
 	dst_len = ft_strlen(dst);

@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 06:09:37 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/16 06:12:13 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 01:07:59 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	if (s != NULL)

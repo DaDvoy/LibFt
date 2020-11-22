@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 18:19:32 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/10 20:15:39 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 01:08:52 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t		ft_strlen(const char *str)
 {
-	int bye;
+	int		bye;
 
 	bye = 0;
 	while (str[bye] != '\0')

@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 14:24:06 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/22 23:26:36 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 01:09:21 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ char		*ft_strrchr(const char *s, int c)
 		len_s--;
 	}
 	if (s[len_s] == sym)
-		return (char*)(s + len_s);
+		return (char *)(s + len_s);
 	return (NULL);
 }
