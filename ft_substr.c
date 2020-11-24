@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 23:39:24 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/23 00:04:03 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/23 21:56:58 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
-	int		lenght;
+	char			*str;
+	unsigned int	lenght;
 
 	if (s == NULL)
 		return (NULL);
