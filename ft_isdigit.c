@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 19:57:38 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/10 20:16:31 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/25 22:39:32 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		ft_isdigit(int arg)
 {
 	if (arg >= '0' && arg <= '9')
 	{
-		return (arg);
+		return (1);
 	}
 	else
 	{

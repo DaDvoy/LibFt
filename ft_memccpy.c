@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 22:32:34 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/22 22:16:41 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/25 22:42:31 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void		*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char	*estr;
 	unsigned char	*edst;
-	int				i;
+	unsigned int	i;
 
 	edst = (unsigned char *)dst;
 	estr = (unsigned char *)src;
