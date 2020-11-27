@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 15:07:10 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/24 00:57:10 by lmushroo         ###   ########.fr       */
+/*   Updated: 2020/11/27 15:07:11 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	hayst_cpy = (char *)haystack;
 	need_cpy = (char *)needle;
-	if (len == 0 && *need_cpy == '\0')
+	if (len == 0 && need_cpy == '\0')
 		return (hayst_cpy);
 	need_len = ft_strlen(need_cpy);
 	if (need_len == 0)

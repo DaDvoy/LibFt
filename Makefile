@@ -6,7 +6,7 @@
 #    By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/10 18:16:03 by lmushroo          #+#    #+#              #
-#    Updated: 2020/11/24 23:52:42 by lmushroo         ###   ########.fr        #
+#    Updated: 2020/11/27 14:54:57 by lmushroo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,8 @@ O_FILES = $(C_FILES:.c=.o)
 NAME = libft.a
 
 CC = gcc
+
+RM = rm -f
 
 CFLAGS = -Wall -Werror -Wextra
 
