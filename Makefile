@@ -6,7 +6,7 @@
 #    By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/10 18:16:03 by lmushroo          #+#    #+#              #
-#    Updated: 2020/11/27 14:54:57 by lmushroo         ###   ########.fr        #
+#    Updated: 2020/11/27 15:58:51 by lmushroo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,10 +34,10 @@ CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
-$(NAME):	$(O_FILES)
+$(NAME):	$(O_FILES) ./libft.h
 			ar -rcs $(NAME) $(O_FILES)
 
-bonus:		$(O_FILES_BONUS) $(O_FILES)
+bonus:		$(O_FILES_BONUS) $(O_FILES) ./libft.h
 			ar -rcs $(NAME) $(O_FILES_BONUS) $(O_FILES)
 
 clean:

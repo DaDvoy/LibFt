@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 17:48:36 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/20 20:54:10 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 16:51:54 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_check(int n)
+int	ft_check(int n)
 {
 	int		i;
 
@@ -30,7 +30,7 @@ int			ft_check(int n)
 	return (i);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		i;
 	char	*str;

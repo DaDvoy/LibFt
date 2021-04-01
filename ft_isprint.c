@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 22:24:35 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/10 21:28:13 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 16:48:16 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int arg)
+int	ft_isprint(int arg)
 {
 	if (arg >= 32 && arg <= 126)
 		return (1);

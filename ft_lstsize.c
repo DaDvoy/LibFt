@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 11:21:40 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/23 01:06:40 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 17:07:57 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	count;
 

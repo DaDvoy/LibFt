@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 19:57:38 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/25 22:39:32 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 16:47:51 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int arg)
+int	ft_isdigit(int arg)
 {
 	if (arg >= '0' && arg <= '9')
 	{

@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 23:00:29 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/23 01:33:48 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 17:09:57 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	size_t	len;
 	char	*str;

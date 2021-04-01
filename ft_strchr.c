@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 16:49:08 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/22 23:25:54 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 17:15:47 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int		y;
 	char	sym;
@@ -26,6 +26,6 @@ char		*ft_strchr(const char *s, int c)
 		y++;
 	}
 	if (sym == '\0')
-		return (char *)(s + y);
+		return ((char *)(s + y));
 	return (NULL);
 }

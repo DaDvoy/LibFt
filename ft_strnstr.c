@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 15:07:10 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/27 15:07:11 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 17:10:25 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*hayst_cpy;
 	char	*need_cpy;

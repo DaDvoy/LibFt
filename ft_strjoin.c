@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 04:33:39 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/25 23:30:48 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 17:10:02 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	len_s1;
 	size_t	len_s2;

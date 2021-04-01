@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 22:29:16 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/23 01:47:01 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 17:23:44 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ static void	*ft_free(char **str)
 	return (NULL);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**str;
 	int		count;

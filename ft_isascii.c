@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 21:44:29 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/10 20:16:33 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 16:47:43 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int arg)
+int	ft_isascii(int arg)
 {
 	if (arg >= 0 && arg <= 127)
 	{

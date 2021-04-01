@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 22:32:34 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/25 22:42:31 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 17:08:08 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char	*estr;
 	unsigned char	*edst;

@@ -6,13 +6,13 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 07:55:00 by lmushroo          #+#    #+#             */
-/*   Updated: 2020/11/16 07:58:10 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/03/01 17:07:51 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*list;
 
