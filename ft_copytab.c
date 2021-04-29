@@ -1,7 +1,7 @@
 
 #include "libft.h"
 
-char    **ft_copytab(char **old_tab)
+char    **ft_copytab(const char **old_tab)
 {
     int     i;
     char    **new_tab;
