@@ -6,7 +6,7 @@
 /*   By: lmushroo <lmushroo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 19:04:05 by lmushroo          #+#    #+#             */
-/*   Updated: 2021/04/01 22:35:33 by lmushroo         ###   ########.fr       */
+/*   Updated: 2021/04/30 16:34:21 by lmushroo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putendl_fd(char *s, int fd);
-void				ft_putstr_fd(char *s, int fd);
+void				ft_putstr_fd(const char *s, int fd);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
@@ -67,5 +67,5 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_itoa(int n);
 void				ft_putnbr_fd(int n, int fd);
 char				**ft_split(char const *s, char c);
-char				**ft_copytab(char **old_tab);
+char				**ft_copytab(const char **old_tab);
 #endif
